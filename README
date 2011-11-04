@@ -1,0 +1,33 @@
+Controller
+
+$schedule->fromArray($form->getValues());
+$schedule->save();
+
+Cs_FlashMessenger::addMessage('Adicionado um novo agendamento!');
+$this->_redirect('/schedule');
+
+
+View
+
+<content>
+<div id="messenger">
+<?php echo $this->flashMessenger();?>
+</div>
+<div id="content">
+<?php echo $this->layout()->content; ?>
+</div>
+
+
+
+Aplication.ini
+
+; Namespaces 
+autoloaderNamespaces[] = "Cs" 
+
+
+
+
+
+
+Further reading:
+http://www.cesarscur.com/2011/05/flashmessenger.html
